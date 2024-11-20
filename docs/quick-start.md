@@ -10,7 +10,7 @@ Once you spend your balance down your instances will be stopped until you add ad
 
 ### 2) Set up your device for connecting to instances <a href="#id-2-set-up-your-device-for-connecting-to-instances" id="id-2-set-up-your-device-for-connecting-to-instances"></a>
 
-We provide a convenient web-connect feature to connect to your instances, but alternative ssh connection is also available for that you need to set your public ssh key in settings page prior to creating an instance. The provided ssh feature is limited and for a full blown ssh experience with scp and sftp you will need to setup a standalone ssh server and expose the ports through -p 22:22 docker options. A prevuild template for ssh server is also available inn public templates.
+We provide a convenient web-connect feature to connect to your instances, but alternative ssh connection is also available for that you need to set your public ssh key in settings page prior to creating an instance. The provided ssh feature is limited and for a full blown ssh experience with scp and sftp you will need to setup a standalone ssh server and expose the ports through -p 22:22 docker options. A prebuilt template for ssh server is also available in public templates.
 
 ### 3) Select and customize a template <a href="#id-3-select-and-customize-a-template" id="id-3-select-and-customize-a-template"></a>
 
