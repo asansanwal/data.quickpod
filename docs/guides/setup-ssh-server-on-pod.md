@@ -42,7 +42,7 @@ replace EXPOSED\_PORT with the port mapping for 22 port and use the POD\_PUBLIC\
 
 <figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
-e.g. `ssh -p 41752 root@136.61.33.107`
+e.g. `ssh -p 42502 root@136.61.33.107`
 
 
 
@@ -50,4 +50,4 @@ if your key is not in the default loation you can specify the key using -i
 
 e.g.&#x20;
 
-`ssh -p 41752 root@136.61.33.107 -i key.pem`
+`ssh -p 42502 root@136.61.33.107 -i key.pem`
