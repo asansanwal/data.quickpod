@@ -26,9 +26,9 @@ save the file with Esc followed by :wq!
 
 `service ssh restart`
 
-`go to /root/.ssh`
+//go to /root/.ssh
 
-and paste the contents of your public\_key in file authorized\_keys
+//and paste the contents of your public\_key in file authorized\_keys
 
 `chmod 600 authorized_keys`
 
