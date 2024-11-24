@@ -17,3 +17,7 @@
 * [Machine Setup](hosting/machine-setup.md)
 * [Platform Fee](hosting/platform-fee.md)
 * [Payouts & Taxes](hosting/payouts-and-taxes.md)
+
+## Guides
+
+* [Setup SSH Server on Pod](guides/setup-ssh-server-on-pod.md)
