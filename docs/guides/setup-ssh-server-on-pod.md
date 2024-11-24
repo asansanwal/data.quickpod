@@ -4,17 +4,17 @@ Clone a public Template like Ubuntu 22.04 and modify the docker options to inclu
 
 Connect to the pod using webssh
 
-run the following commands
+//run the following commands
 
-apt update
+`apt update`
 
-apt install openssh-server vim
+`apt install openssh-server vim`
 
-cd /etc/ssh
+`cd /etc/ssh`
 
-vi sshd\_config
+`vi sshd_config`
 
-uncomment the lines
+//uncomment the lines
 
 \#PermitRootLogin prohibit-password
 
@@ -22,27 +22,27 @@ uncomment the lines
 
 save the file with Esc followed by :wq!
 
-restart sshd with&#x20;
+//restart sshd with&#x20;
 
-service ssh restart
+`service ssh restart`
 
-go to /root/.ssh
+`go to /root/.ssh`
 
 and paste the contents of your public\_key in file authorized\_keys
 
-chmod 600 authorized\_keys
+`chmod 600 authorized_keys`
 
 
 
 connect using default key file
 
-ssh -p EXPOSED\_PORT ubuntu@POD\_PUBLIC\_IP
+ssh -p EXPOSED\_PORT root@POD\_PUBLIC\_IP
 
 replace EXPOSED\_PORT with the port mapping for 22 port and use the POD\_PUBLIC\_IP from connect popup
 
 <figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
-e.g. ssh -p 41752 ubuntu@136.61.33.107
+e.g. `ssh -p 41752 root@136.61.33.107`
 
 
 
@@ -50,4 +50,4 @@ if your key is not in the default loation you can specify the key using -i
 
 e.g.&#x20;
 
-ssh -p 41752 ubuntu@136.61.33.107 -i key.pem
+`ssh -p 41752 root@136.61.33.107 -i key.pem`
