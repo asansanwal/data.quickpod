@@ -17,6 +17,7 @@
 * [Machine Setup](hosting/machine-setup.md)
 * [Platform Fee](hosting/platform-fee.md)
 * [Payouts & Taxes](hosting/payouts-and-taxes.md)
+* [Hosting Agreement](hosting/hosting-agreement.md)
 
 ## Guides
 
