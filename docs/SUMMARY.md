@@ -26,3 +26,4 @@
 ## API & CLI
 
 * [API Documentation](api-and-cli/api-documentation.md)
+* [CLI](api-and-cli/cli.md)
