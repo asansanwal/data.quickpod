@@ -22,3 +22,7 @@
 ## Guides
 
 * [Setup SSH Server on Pod](guides/setup-ssh-server-on-pod.md)
+
+## API & CLI
+
+* [API Documentation](api-and-cli/api-documentation.md)
