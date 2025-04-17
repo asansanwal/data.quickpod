@@ -13,3 +13,5 @@ $GPU\_COUNT The number of GPUs in your Pod&#x20;
 $QUICKPOD\_PORT\_XXXX The externally mapped port for your specified internal port XXXX e.g. you mapped with -p 3000:3000 and quickpod mapped the machine port to 41000 then $QUICKPOD\_PORT\_3000 will give you the value 41000. This is dynamic mapping.
 
 SYMMETRICAL PORTS are ports >= 70000 provided in -p 70000:70000, they map the same internal and external ports and are available through the variable $QUICKPOD\_PORT\_XXXX (e.g. $QUICKPOD\_PORT\_70000)
+
+To make environment variables available inside the Pod add env >> /etc/environment to the startup script
