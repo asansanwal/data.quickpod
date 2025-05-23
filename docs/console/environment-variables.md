@@ -14,4 +14,4 @@ $QUICKPOD\_PORT\_XXXX The externally mapped port for your specified internal por
 
 SYMMETRICAL PORTS are ports >= 70000 provided in -p 70000:70000, they map the same internal and external ports and are available through the variable $QUICKPOD\_PORT\_XXXX (e.g. $QUICKPOD\_PORT\_70000)
 
-To make environment variables available inside the Pod add \_\_env >> /etc/environment to the startup script
+To make environment variables available inside the Pod add env >> /etc/environment to the startup script
