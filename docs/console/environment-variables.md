@@ -1,6 +1,6 @@
 # Environment Variables
 
-When you create a template and specify the startup command, it is sometimes necessary to know the port mappings, public ip address etc. The following environment variables are available to use in your startup scripts&#x20;
+When you create a template and specify the startup command, it is sometimes necessary to know the port mappings, public ip address etc. The following environment variables are available to use in your startup scripts and inside your pod.
 
 $PUBLIC\_IPADDR Public IP address of the machine hosting your pod
 
