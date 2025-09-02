@@ -1,13 +1,12 @@
 # API Documentation
 
-APIS are divided into two sections Default and Custom, Default provides authentication mechanisms and Custom is all other APIs
+APIS are divided into two sections RO (Read Only) and RW (Read and Write), Auth is in RW section
 
 
 
-Default
+Read Only - RO\
+[https://api.quickpod.org/swagger/index.html](https://api.quickpod.org/swagger/index.html)
 
-{% embed url="https://api.quickpod.io/api:2USncWkT#/" %}
+Read and Write - RW\
+[https://api.quickpod.org/update/swagger/index.html](https://api.quickpod.org/update/swagger/index.html)
 
-Custom
-
-{% embed url="https://api.quickpod.io/api:KoOk0R5J" %}
