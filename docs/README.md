@@ -1,28 +1,39 @@
 # Overview
 
-**Introduction**
+QuickPod is a distributed GPU and CPU marketplace for renting compute, publishing templates, operating host machines, and exposing workloads through higher-level product surfaces such as clusters and serverless endpoints.
 
-#### QuickPod <a href="#vastai" id="vastai"></a>
+## Start here
 
-Quickpod is a distributed cloud computing platform marketplace focused on reducing the costs and availability of compute-intensive workloads, enabling anyone to easily leverage large-scale GPU and CPU compute. Our platform allows all compute providers large and small to easily monetize their spare capacity. Our search engine allows users to quickly find the best options and deals for compute services according to their specific requirements.
+Public console entry points:
 
-#### Key Features <a href="#key-features" id="key-features"></a>
+* [GPU Search](https://console.quickpod.io/)
+* [CPU Search](https://console.quickpod.io/cpu-pod-search)
+* [Templates](https://console.quickpod.io/templates)
+* [GPU Catalog](https://console.quickpod.io/gpu-types)
+* [Host Stores](https://console.quickpod.io/host-stores)
+* [System Status](https://console.quickpod.io/system-status)
 
-* Spin up container instances with affordable, powerful GPU in seconds
-* Easily find the best offers matching specific compute requirements
-* Preconfigured and custom shareable templates for one-click launches
-* Web SSH for quick and easy access
-* Access with our intuitive GUI or direct HTTPS REST APIs
-* The most cost effective GPU and CPU instance pricing in the world
+## Current product areas
 
-#### How it Works <a href="#how-it-works" id="how-it-works"></a>
+QuickPod now includes more than basic pod search and templates.
 
-Our providers range from individual hobbyists up to tier 4 datacenters with thousands of GPUs. Our software helps streamline and automate the hosting process while allowing providers full control over pricing and rental contract details. Our interface allows searching for machines based on all relevant details including GPU type, GPU ram, CPU, system RAM, connectivity, etc.
+Major product areas covered in these docs:
 
-#### Mission <a href="#mission" id="mission"></a>
+* search and launch workflows
+* public and community templates
+* authenticated settings, billing, notifications, and secrets
+* persistent storage and cloud sync
+* clusters and serverless publishing
+* host listings, host stores, occupancy, and contracts
+* public console landing pages used for discovery and sharing
 
-Our mission is to provide a real-time global marketplace where, idle CPU and GPU compute power is democratized, so that all three players hosts, users and platform benefit from it.
+## Who these docs are for
 
-#### Talk to Us <a href="#talk-to-us" id="talk-to-us"></a>
+* renters and users looking for affordable GPU or CPU compute
+* template authors who want repeatable launch definitions
+* hosts listing machines on the QuickPod marketplace
+* teams integrating QuickPod workflows into automation and APIs
 
-You can contact us on our [Discord](https://discord.gg/CwgSdWVCHC), our live website chat, or via email: help@quickpod.io and support@quickpod.io
+## Support
+
+You can contact QuickPod through the website chat, Discord, or support email channels such as help@quickpod.io and support@quickpod.io.

@@ -1,45 +1,38 @@
 # Billing
 
-## Billing
+QuickPod uses prepaid account credit. You add credit first, then active workloads consume that balance over time.
 
-Quickpod requires prepayment in form of credit to account before you can launch pods, the billing/metering is a continous process till the pod is destroyed. If the pod is running runtime and storage costs accrue but if the pod is stopped only storage costs accrue. Bandwidth is totally free and there are no charges for downloads or uploads.
+## Current payment behavior
 
-We accept credit card payments through Stripe and crypto payments through Coinbase. Use the add credit button to purchase credits one-time. Use the auto-debt feature to have the system automatically top up your account using a saved credit card when it runs low.
+QuickPod's current console billing flow supports card checkout through Stripe and crypto-oriented billing flows exposed through the billing experience in Settings.
 
-**Negative Balances**
+The billing area in the console also exposes invoice history and payment-link or payment-method related controls.
 
-Quickpod does not automatically destroy your instance(s) and data once your balance reaches zero.
+## How charges work
 
-Whenever your balance reaches zero or below, your instances will be stopped automatically but not destroyed. That way the data is still available for you to copy off the instance. Since the data is still stored on the instance, you are still billed for storage on stopped instances even when your balance is negative.
+QuickPod separates compute cost from storage cost.
 
-**When the balance reaches negative $2 or below the pod is destroyed completely.**
+* Running pods accrue active compute cost plus storage cost.
+* Stopped pods stop compute cost but continue to accrue storage cost while they still exist.
+* Destroyed pods stop both compute and storage cost for that pod.
+* Persistent storage and sync workflows can have their own associated costs depending on how you size or use them.
 
+Bandwidth is not positioned as a separate line-item charge in the basic pod billing flow.
 
+## What happens when your balance reaches zero
 
-**Update Frequency**
+QuickPod does not immediately destroy your workloads and data when your balance reaches zero.
 
-Balances are updated about once every 15 minutes.
+Instead, pods are stopped automatically so you can still recover data or add more credit. Storage charges may continue while the stopped pod still exists.
 
-**Credit Card Security**
+## Billing guidance
 
-Quickpod does not see, store or process your credit card numbers, they are passed directly to Stripe
+* Destroy pods you no longer need.
+* Use volumes or cloud sync if you need persistence without leaving expensive pod disks running indefinitely.
+* Review invoices and balance inside the authenticated settings experience regularly.
 
-#### Refunds <a href="#refunds" id="refunds"></a>
+## Related console routes
 
-After spending credits, there are absolutely no refunds.
-
-For unspent credits, contact us on the website chat to request a refund. In most cases we can refund unspent credits. Unfortunately Coinbase Commerce does not support refunds, so there are no refunds possible for credits purchased via Coinbase Commerce.
-
-#### Pricing <a href="#pricing" id="pricing"></a>
-
-There are separate prices and charges for:
-
-* Active rental (GPU) (in $/hr)
-* Storage costs (in $/GB/month or total $/hr)
-* Bandwidth is free
-
-You are charged the base active rental cost for every second your instance is in the active/connected state. You are charged the storage cost (which depends on the size of your storage allocation) for every single second your instance exists and is online (for all states other than offline). Stopping an instance does not avoid storage costs.
-
-You are not charged active rental or storage costs for instances that are currently offline.
-
-Contract duration is preset when you create an instance as per the hosts duration set, you are at liberty to terminate instance before that or continue till the expiry day. at expiry the instance will be stopped and can not be started again.
+* Authenticated billing area: `/settings`
+* Public sign in: [https://console.quickpod.io/log-in](https://console.quickpod.io/log-in)
+* Public sign up: [https://console.quickpod.io/sign-up](https://console.quickpod.io/sign-up)

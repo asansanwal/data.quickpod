@@ -1,37 +1,52 @@
 # Introduction
 
-### What is the Console? <a href="#what-is-the-console" id="what-is-the-console"></a>
+The QuickPod console is the main web interface for renting compute, managing workloads, browsing templates, operating host machines, and accessing public marketplace pages.
 
-The QuickPod console is a web application that is a user interface for using Quickpod Platform. Using it you can search avaliable machines, manage your instances, browse templates, view and edit your account information, purchase credit for using QuickPod, and much more. It has two modes user and host, users get to see GPU and CPU Search, hosts have additional hosting section where they can view the machines they are hosting and make changes to their listings.
+Primary console URL: [https://console.quickpod.io](https://console.quickpod.io)
 
-### GPU Search <a href="#gpu-search" id="gpu-search"></a>
+## Public pages you can open without logging in
 
-This is the default page where users can browse for available GPU offers, you can think of an offer as a slice of the machine which is available and can be rented from this page. Before you can create PODs u will need to add credit and ideally set a ssh public key also to access the POD. We provide a webconnect also which can be used alternatively.
+These routes are useful for public discovery, sharing, and documentation links:
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+* [GPU Search](https://console.quickpod.io/)
+* [CPU Search](https://console.quickpod.io/cpu-pod-search)
+* [Templates](https://console.quickpod.io/templates)
+* [GPU Catalog](https://console.quickpod.io/gpu-types)
+* [Host Stores](https://console.quickpod.io/host-stores)
+* [System Status](https://console.quickpod.io/system-status)
+* [Clusters](https://console.quickpod.io/clusters)
+* [Serverless](https://console.quickpod.io/serverless)
+* [Storage](https://console.quickpod.io/storage)
+* [Refer & Earn](https://console.quickpod.io/refer)
 
+## Core console areas
 
+### Search and launch
 
-### CPU Search <a href="#cpu-search" id="cpu-search"></a>
+Use GPU Search or CPU Search to find rentable offers with live filters for hardware count, hardware type, VRAM, location, duration, price, occupied state, and related machine attributes.
 
-CPU Search is counterpart of GPU Search specifically for CPU only pod search. The navigation is similar to GPU Search, you can switch from a GPU search to a CPU search by using the buttons on the upper left hand corner of the screen.
+### Templates
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+The Templates page includes public templates, community templates, and your own templates once you log in. Templates define image, launch mode, startup behavior, Docker options, published ports, and readme content.
 
-### CPU and GPU Templates Page <a href="#cpu-and-gpu-templates-page" id="cpu-and-gpu-templates-page"></a>
+### Pods
 
-CPU and GPU templates page provides predefined public templates and your own custom templates. You can create a brand new template from Create Template link or clone a public template into your own account. Cloning may be needed to further customize the template with your own parameters.
+The authenticated Pods area is where you monitor pod readiness, connect, restart, stop, or destroy workloads after launch.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+### Storage
 
-### GPU and CPU Pods (Pods) <a href="#gpu-and-cpu-pods" id="gpu-and-cpu-pods"></a>
+The Storage area covers persistent volumes and cloud sync workflows for moving data between QuickPod volumes and supported providers.
 
-GPU and CPU Pods page shows a list of all Pods of respective type under your account, there are options available to connect to the pod, see there status and console outputs. Stop, start and restart pod, or even destroy the pod when you no longer need it.
+### Clusters and serverless
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+Clusters let you run multiple replicas of a template under one logical deployment, and Serverless lets you publish a cluster service through a managed invoke URL.
 
-### GPU and CPU Machines (Hosting) <a href="#gpu-and-cpu-machines" id="gpu-and-cpu-machines"></a>
+### Settings and security
 
-GPU and CPU Machines page are for host mode only tied to a host type account, and provides way for Hosts to view and list their machines.
+The Settings area now includes billing, invoices, two-factor authentication, secure API keys, user profile settings, notifications, and reusable secrets.
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+### Hosting mode
+
+Host accounts see additional hosting routes for listing machines, adjusting offer pricing, monitoring occupancy, reviewing contracts, and managing host storefronts.
+
+For a page-by-page public route reference, see [Public Pages](../public/public-pages.md).

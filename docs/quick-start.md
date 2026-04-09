@@ -1,39 +1,65 @@
 # Quick Start
 
-## Quick Start
+QuickPod can be used directly from the public console at [console.quickpod.io](https://console.quickpod.io/).
 
-### 1) Create account & add credit <a href="#id-1-create-account" id="id-1-create-account"></a>
+Useful direct links:
 
-Before you can rent a machine on QuickPod, you will need to setup an account and add credit. Click on the Add Credit button to add credit from Stripe payment. Adding a credit card is the simplest method. Crypto payments through Coinbase are also available. You can change the amount on the stripe checkout page.
+* [GPU Search](https://console.quickpod.io/)
+* [CPU Search](https://console.quickpod.io/cpu-pod-search)
+* [Templates](https://console.quickpod.io/templates)
+* [GPU Catalog](https://console.quickpod.io/gpu-types)
+* [Host Stores](https://console.quickpod.io/host-stores)
+* [Sign Up](https://console.quickpod.io/sign-up)
+* [Log In](https://console.quickpod.io/log-in)
 
-Once you spend your balance down your instances will be stopped until you add additional credits.
+## 1. Create an account and add credit
 
-### 2) Set up your device for connecting to instances <a href="#id-2-set-up-your-device-for-connecting-to-instances" id="id-2-set-up-your-device-for-connecting-to-instances"></a>
+Create an account first, then add prepaid credit from the console. QuickPod currently supports card checkout through Stripe and crypto checkout through the billing flow inside the console.
 
-We provide a convenient web-connect feature to connect to your instances, but alternative ssh connection is also available for that you need to set your public ssh key in settings page prior to creating an instance. The provided ssh feature is limited and for a full blown ssh experience with scp and sftp you will need to setup a standalone ssh server and expose the ports through -p 22:22 docker options. A prebuilt template for ssh server is also available in public templates.
+If your balance reaches zero or below, QuickPod stops your pods automatically. Stopped pods can still accrue storage charges until you destroy them.
 
-### 3) Select and customize a template <a href="#id-3-select-and-customize-a-template" id="id-3-select-and-customize-a-template"></a>
+## 2. Prepare your access method
 
-A template is a definition of a docker instance and contains a docker image, related settings and a startup command
+QuickPod supports browser-based connection workflows and SSH-based access.
 
-### 4) Filter machines <a href="#id-4-filter-machines" id="id-4-filter-machines"></a>
+For browser access, many templates expose a web UI, notebook UI, or terminal-ready endpoint directly.
 
-Use the filters to specify the GPU number, type and other factors such as port ranges, number of CPUs, amount of GPU ram and more. Each filter will narrow the offers displayed. If you see few or zero search results, reset your filters.
+For SSH access, add your SSH public key in the authenticated console settings area before you create pods. If your workload needs a full SSH server, use a template that exposes SSH or clone a template and publish the right container port through the template's Docker options.
 
-### 5) Select Storage <a href="#id-5-select-storage" id="id-5-select-storage"></a>
+## 3. Choose a public or community template
 
-Make sure to use the storage slider on top of the create page to choose your storage allocation size. You can't change this after instance creation, so make sure to size correctly at start!
+Open [Templates](https://console.quickpod.io/templates) to browse public templates and community templates, or create your own template after login.
 
-### 6) Rent <a href="#id-6-rent" id="id-6-rent"></a>
+Templates define the image, launch mode, startup behavior, published ports, entrypoint behavior, and related readme content used during pod creation.
 
-Hitting the blue Create POD button will accept the offer and create an instance with the specified docker image and launch mode. Once rented, the instance will appear in the Pods page.
+## 4. Search for an offer
 
-### 7) Connecting to your POD <a href="#id-7-enjoy" id="id-7-enjoy"></a>
+Use [GPU Search](https://console.quickpod.io/) or [CPU Search](https://console.quickpod.io/cpu-pod-search) to filter current offers by hardware count, GPU or CPU type, location, cost, duration, VRAM, occupied state, and other hardware traits.
 
-If the docker image is cached your POD should load in seconds, it will go through stages of downloading which can take 1 minutes to 10 minutes depending on internet speeds. After loading the instance will startup. Once the instance has started the connect status will turn green and you can click on connect and then webconnect to connect to your POD. The popup will also provide information about connecting with your ssh private keys, if you previously setup a public ssh key in settings.
+The search pages are public and can be used before login.
 
-Please do not click any buttons till the pod is ready for use.
+## 5. Set storage, secrets, and launch options
 
-### 8) Destroy <a href="#id-8-destroy" id="id-8-destroy"></a>
+During pod creation, choose the storage allocation carefully because storage cost continues while a pod exists.
 
-Make sure to destroy PODS after you are done with them. Stopping the POD will prevent GPU charges but you will still accrue charges for the POD storage allocation. Stopped PODS can be restarted if/when the GPU/CPU is available.
+If your workload needs reusable credentials or mounted secrets, configure them from the authenticated console before launch and attach them to the pod during creation.
+
+If you need persistent shared data across launches, review the storage features described in [Storage & Cloud Sync](console/storage-and-cloud-sync.md).
+
+## 6. Create the pod
+
+Creating the pod reserves the selected offer and starts the workload from the chosen template. The pod then appears on the Pods page in the authenticated console.
+
+QuickPod shows startup and readiness state while the image is pulled, created, and initialized.
+
+## 7. Connect and work
+
+Once the pod becomes ready, connect through the pod's exposed public routes, browser tools, or SSH depending on how the template was configured.
+
+Many public templates expose ports such as notebooks, dashboards, model APIs, or app UIs directly from the pod.
+
+## 8. Stop or destroy when finished
+
+Stopping a pod prevents active compute charges, but storage still accrues while the pod exists.
+
+Destroy the pod when you no longer need the instance or its disk allocation. If you need persistence across sessions, move data into a volume or cloud-sync workflow first.
