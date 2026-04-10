@@ -6,6 +6,7 @@
 ## Console
 
 * [Introduction](console/introduction.md)
+* [Console Operations FAQ](console/operations-faq.md)
 * [Search & Launch](console/search-and-launch.md)
 * [Pods](console/pods.md)
 * [Settings](console/settings.md)

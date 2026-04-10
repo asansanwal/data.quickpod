@@ -4,6 +4,8 @@ The QuickPod console is the main web interface for renting compute, managing wor
 
 Primary console URL: [https://console.quickpod.io](https://console.quickpod.io)
 
+For an operation-by-operation decision guide, see [Console Operations FAQ](operations-faq.md).
+
 ## Public pages you can open without logging in
 
 These routes are useful for public discovery, sharing, and documentation links:
