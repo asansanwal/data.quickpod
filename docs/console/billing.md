@@ -17,7 +17,7 @@ QuickPod separates compute cost from storage cost.
 * Destroyed pods stop both compute and storage cost for that pod.
 * Persistent storage and sync workflows can have their own associated costs depending on how you size or use them.
 
-Bandwidth is not positioned as a separate line-item charge in the basic pod billing flow.
+Internet bandwidth usage is charged at $4 per TB. This bandwidth pricing is set by the platform and is subject to change.
 
 ## What happens when your balance reaches zero
 
